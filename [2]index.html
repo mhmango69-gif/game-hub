@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Game Hub</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #eef2f3; text-align: center; }
+  h1 { color: #222; margin-top: 20px; }
+  .nav { margin: 20px; }
+  .nav button { margin: 5px; padding: 8px 16px; font-size: 15px; cursor: pointer; border-radius: 5px; }
+  .page { display: none; }
+  .page.active { display: block; }
+  .game-button { display: block; margin: 8px auto; padding: 10px 20px; width: 240px; text-align: center; background: #4CAF50; color: white; border-radius: 6px; font-size: 15px; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<h1>🎮 Ultimate Game Hub</h1>
+
+<div class="nav">
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('roblox')">Roblox</button>
+  <button onclick="showPage('geometry')">Geometry Dash</button>
+  <button onclick="showPage('mini')">Mini Games</button>
+</div>
+
+<!-- Home -->
+<div id="home" class="page active">
+  <h2>📌 Click a category above to start playing!</h2>
+</div>
+
+<!-- Roblox -->
+<div id="roblox" class="page">
+  <h2>▶️ Popular Roblox Games</h2>
+  <a class="game-button" href="https://www.roblox.com/games/5131000323/Blox-Fruits" target="_blank">Blox Fruits</a>
+  <a class="game-button" href="https://www.roblox.com/games/4934137746/Adopt-Me" target="_blank">Adopt Me!</a> <!-- Adopt Me info: popular pet game :contentReference[oaicite:0]{index=0} -->
+  <a class="game-button" href="https://www.roblox.com/games/0000000000" target="_blank">Untitled Melee RNG (Replace)</a>
+  <a class="game-button" href="https://www.roblox.com/games/404791618/SharkBite" target="_blank">SharkBite</a>
+  <a class="game-button" href="https://www.roblox.com/games/0000000000" target="_blank">Grow a Garden (Replace)</a>
+  <a class="game-button" href="https://www.roblox.com/games/0000000000" target="_blank">Steal a Brainrot (Replace)</a>
+  <!-- Add more real Roblox links by replacing 0000000000 with IDs from Roblox -->
+</div>
+
+<!-- Geometry Dash -->
+<div id="geometry" class="page">
+  <h2>➡️ Geometry Dash Unblocked</h2>
+  <a class="game-button" href="https://www.yiv.com/Geometry-Dash-Unblocked" target="_blank">Geometry Dash Unblocked (Yiv)</a> :contentReference[oaicite:1]{index=1}
+  <a class="game-button" href="https://classroom76.app/games/geometry-dash/" target="_blank">Geometry Dash Unblocked 76</a> :contentReference[oaicite:2]{index=2}
+  <a class="game-button" href="https://hypehype.com/en/games/geometry-dash" target="_blank">Geometry Dash (HypeHype)</a> :contentReference[oaicite:3]{index=3}
+  <a class="game-button" href="https://ozgames.io/geometry-dash" target="_blank">Geometry Dash Variety</a> :contentReference[oaicite:4]{index=4}
+</div>
+
+<!-- Mini Games -->
+<div id="mini" class="page">
+  <h2>🔥 Mini Web Games</h2>
+  <a class="game-button" href="https://www.crazygames.com/game/1v1-lol" target="_blank">1v1.LOL</a>
+  <a class="game-button" href="https://www.crazygames.com/game/slope" target="_blank">Slope</a>
+  <a class="game-button" href="https://www.crazygames.com/game/bloxorz" target="_blank">Bloxorz</a>
+  <a class="game-button" href="https://unblockedgames.in/popular/" target="_blank">Unblocked Games Hub</a>
+  <a class="game-button" href="https://www.yiv.com/" target="_blank">Games on Yiv.com</a>
+</div>
+
+<script>
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
